@@ -26,7 +26,7 @@ public class MergeSorter<T> {
     private List<T> merge(List<T> first, List<T> second, Comparator<T> comparator) {
         List<T> result = new MyLinkedList<>();
         int total = first.size() + second.size();
-        for (int i=0; i<total; i++) {
+        for (int i = 0; i<total; i++) {
             List<T> winner = compareElm(first, second, comparator);
             result.add(winner.remove(0));
         }

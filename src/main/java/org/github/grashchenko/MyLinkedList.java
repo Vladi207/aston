@@ -75,7 +75,7 @@ public class MyLinkedList<T> implements List<T> {
         }
 
         if (index < 0 || index > size()) {
-            return null;
+            throw new IndexOutOfBoundsException();
         }
 
         Node<T> temp = head;
