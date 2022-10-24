@@ -74,7 +74,7 @@ public class MyLinkedList<T> implements List<T> {
             return null;
         }
 
-        if (index < 0 || index > size()) {
+        if (checkIndex(index)) {
             throw new IndexOutOfBoundsException();
         }
 
@@ -98,6 +98,10 @@ public class MyLinkedList<T> implements List<T> {
             head = head.getNext();
             size--;
             return result;
+        }
+
+        if (checkIndex(index)) {
+            throw new IndexOutOfBoundsException();
         }
 
         int currentIndex = 0;
@@ -183,6 +187,10 @@ public class MyLinkedList<T> implements List<T> {
         }
 
         return Arrays.toString(result);
+    }
+
+    private boolean checkIndex(int index) {
+        return index < 0 || index >= size();
     }
 
     @Override
