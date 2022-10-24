@@ -158,12 +158,8 @@ public class MyLinkedList<T> implements List<T> {
 
     public List<T> subList(int fromIndex, int toIndex) {
 
-        if (fromIndex < 0)
+        if (fromIndex < 0 || toIndex > size || fromIndex > toIndex)
             throw new IndexOutOfBoundsException();
-        if (toIndex > size)
-            throw new IndexOutOfBoundsException();
-        if (fromIndex > toIndex)
-            throw new IllegalArgumentException();
 
         int i = 0;
         MyLinkedList<T> list = new MyLinkedList<T>();
