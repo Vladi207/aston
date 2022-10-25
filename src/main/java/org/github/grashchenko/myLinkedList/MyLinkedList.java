@@ -1,4 +1,4 @@
-package org.github.grashchenko.aston.myLinkedList;
+package org.github.grashchenko.myLinkedList;
 
 import java.util.*;
 
