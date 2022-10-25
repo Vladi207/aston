@@ -1,4 +1,4 @@
-package org.github.grashchenko;
+package org.github.grashchenko.aston.myLinkedList;
 
 import java.util.Comparator;
 import java.util.List;
